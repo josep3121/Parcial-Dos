@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\inicio;
+use App\Http\Controllers\Editoriales;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,7 @@ use App\Http\Controllers\inicio;
 
 Route::get('/', [inicio::class, 'index']); 
 
-Route::get('/inicio', function () {
-    return view('inicio');
-});
+Route::get('/inicio', [inicio::class, 'principio']); 
+
+Route::get('/Editoriales', [Editoriales::class, 'listar']); 
+
