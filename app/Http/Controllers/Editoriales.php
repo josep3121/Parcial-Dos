@@ -14,9 +14,23 @@ class Editoriales extends Controller
     return view('ListadoEditorial',['editorial'=>$editorial]);
     }
 
-    public function registrar(){
-        $editorial = editorial::all();
-    return view('ListadoEditorial',['editorial'=>$editorial]);
+    public function registrar(Request $request){
+        $editorial= new editorial();
+        $editorial->nombre = $request->input('name');
+        $editorial->direccion = $request->input('dir');
+        $editorial->ciudad = $request->input('ciu');
+        $editorial->telefono = $request->input('tel');
+       
+        $editorial->save();
+        return redirect()->route('ListadoEditorial');
+
+    
+    }
+    public function registrar1(Request $request){
+       
+        return view('registrar');
+
+    
     }
     
 }

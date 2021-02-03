@@ -20,4 +20,7 @@ Route::get('/', [inicio::class, 'index']);
 Route::get('/inicio', [inicio::class, 'principio']); 
 
 Route::get('/Editoriales', [Editoriales::class, 'listar']); 
+Route::post('/registrar', [Editoriales::class, 'registrar']); 
+Route::get('/registrar', [Editoriales::class, 'registrar1']); 
+
 

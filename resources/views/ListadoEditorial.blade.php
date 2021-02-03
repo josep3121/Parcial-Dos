@@ -3,7 +3,7 @@
 
 <h4 align="center"> Listado Editoriales </h4>
 <div align="right">
-    <a  href="#" class="btn btn-primary">Registrar</a>
+    <a  href="{{ url('/registrar') }}" class="btn btn-primary">Registrar</a>
 </div>
 
 <table class="table">
